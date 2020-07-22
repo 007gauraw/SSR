@@ -1,36 +1,36 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { createInstantSearch } from 'react-instantsearch-dom/server';
-import {
-  RefinementList,
-  SearchBox,
-  Hits,
-  Configure,
-} from 'react-instantsearch-dom';
-
-const { InstantSearch, findResultsState } = createInstantSearch();
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import ListView from "./listView";
+// const { InstantSearch, findResultsState } = createInstantSearch();
 
 class App extends Component {
+  updatePageCount(opration, currentPage) {
+    let newPageNumber;
+    if (opration === "increse") {
+      newPageNumber = currentPage + 1;
+    } else {
+      newPageNumber = currentPage - 1;
+    }
+    window.location.href = `http://localhost:8080/${newPageNumber}`;
+  }
   render() {
-    const { resultsState, searchClient } = this.props;
-
+    const { columns, rows, pageNumber } = this.props;
     return (
-      <InstantSearch
-        searchClient={searchClient}
-        indexName="instant_search"
-        resultsState={resultsState}
-      >
-        <Configure hitsPerPage={3} />
-        <SearchBox />
-        <Hits />
-        <RefinementList attribute="categories" />
-      </InstantSearch>
+      <React.Fragment>
+        <ListView columns={columns} rows={rows} />
+        <button onClick={() => this.updatePageCount("decrese", pageNumber)}>
+          prev
+        </button>
+        <button onClick={() => this.updatePageCount("increse", pageNumber)}>
+          next
+        </button>
+      </React.Fragment>
     );
   }
 }
 
 App.propTypes = {
-  resultsState: PropTypes.object,
+  resultsState: PropTypes.object
 };
 
-export { App, findResultsState };
+export { App };

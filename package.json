@@ -6,6 +6,7 @@
   "scripts": {
     "start": "webpack && nodemon dist/server.js",
     "watch": "webpack --watch",
+    "inspect": "webpack && nodemon --inspect dist/server.js",
     "build": "webpack --mode=production",
     "test": "jest"
   },
@@ -18,19 +19,26 @@
     "babel-core": "6.26.3",
     "babel-jest": "24.8.0",
     "babel-loader": "8.0.6",
+    "css-loader": "^3.6.0",
     "jest": "24.8.0",
     "nodemon": "1.19.1",
     "react-test-renderer": "16.8.6",
+    "ts-loader": "^8.0.1",
     "webpack": "4.35.3",
     "webpack-cli": "3.3.5",
     "webpack-node-externals": "1.7.2"
   },
   "dependencies": {
     "algoliasearch": "3.33.0",
+    "axios": "^0.19.2",
     "express": "4.17.1",
+    "isomorphic-style-loader": "^5.1.0",
+    "mdbreact": "^4.27.0",
+    "postcss-loader": "^3.0.0",
     "prop-types": "15.6.0",
     "react": "16.8.6",
     "react-dom": "16.8.6",
-    "react-instantsearch-dom": "5.7.0"
+    "react-instantsearch-dom": "5.7.0",
+    "style-loader": "^1.2.1"
   }
 }
