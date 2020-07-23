@@ -1,18 +1,40 @@
-This example shows how to do server side rendering and React InstantSearch.
+## Git Repo
+https://github.com/007gauraw/SSR
 
-## Clone the example
+
+## Live demo
+
+https://hackernewsfeedgaurav.herokuapp.com/
+
+
+## Clone the Code
 
 ```
-curl https://codeload.github.com/algolia/react-instantsearch/tar.gz/master | tar -xz --strip=2 react-instantsearch-master/examples/server-side-rendering
+https://github.com/007gauraw/SSR.git
+
 ```
 
 ## Start the example
 
 ```sh
-yarn install --no-lockfile
-yarn start
+npm install
+npm start
 ```
 
-Read more about react-instantsearch [in our documentation](https://www.algolia.com/doc/guides/building-search-ui/what-is-instantsearch/react/).
+Please feel free to contact 
+Email : iamgaurawjoshi@gmail.com
+ 
+## Working Functionality
 
-This example was made possible thanks to https://github.com/Roilan/react-server-boilerplate.
+* I did try to match the requirement as most as possible
+* Voteting feature is working fine 
+* Hide feature working fine
+* Next page Prev page working fine
+* Heroku pipeline working fine (CICD)
+
+## Things that didnt work out
+
+* Unable to add css loader in web config
+* due to which unable to to show charts prioperly 
+ 
+
