@@ -31,10 +31,14 @@ Email : iamgaurawjoshi@gmail.com
 * Hide feature working fine
 * Next page Prev page working fine
 * Heroku pipeline working fine (CICD)
+* All device compatibility added , Works on Mobile as well as desktop, ipad as well. Well tested :) 
 
 ## Things that didnt work out
 
 * Unable to add css loader in web config
 * due to which unable to to show charts prioperly 
- 
+
+
+## WOrking envoirment 
+Due to security restrictions on office machine I have develop all the functinality on cloude based platform
 
