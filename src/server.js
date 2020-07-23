@@ -16,15 +16,15 @@ async function loadApp(req, res, pageNumber = 1){
     const initialState = {
       "name": "gaurav", columns: [
         {
-          label: 'author',
-          field: 'author',
+          label: 'Comments',
+          field: 'Comments',
           sort: 'asc',
           width: 150
         },
         {
 
-          label: 'comment_text',
-          field: 'comment_text',
+          label: 'Vote Count',
+          field: 'Vote Count',
           sort: 'asc',
           width: 270
         },
@@ -37,8 +37,8 @@ async function loadApp(req, res, pageNumber = 1){
         },
      {
 
-          label: 'title',
-          field: 'title',
+          label: 'News Details',
+          field: 'News Details',
           sort: 'asc',
           width: 270
         }
