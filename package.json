@@ -4,7 +4,7 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "start": "webpack && dist/server.js",
+    "start": "webpack && node dist/server.js",
     "watch": "webpack --watch",
     "inspect": "webpack && nodemon --inspect dist/server.js",
     "build": "webpack --mode=production",
