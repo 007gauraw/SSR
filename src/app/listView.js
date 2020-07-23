@@ -87,7 +87,7 @@ class ListView extends Component {
 
     return (
       <div>
-        <h1 id='title'>React Dynamic Table</h1>
+        
         <table id='students'>
           <tbody>
             <tr>
