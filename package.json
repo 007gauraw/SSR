@@ -10,7 +10,19 @@
     "build": "webpack --mode=production",
     "test": "jest"
   },
-  "devDependencies": {
+  "devDependencies": {},
+  "dependencies": {
+    "algoliasearch": "3.33.0",
+    "axios": "^0.19.2",
+    "express": "4.17.1",
+    "isomorphic-style-loader": "^5.1.0",
+    "mdbreact": "^4.27.0",
+    "postcss-loader": "^3.0.0",
+    "prop-types": "15.6.0",
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
+    "react-instantsearch-dom": "5.7.0",
+    "style-loader": "^1.2.1",
     "@babel/core": "7.4.5",
     "@babel/plugin-proposal-class-properties": "7.4.4",
     "@babel/polyfill": "7.4.4",
@@ -27,18 +39,5 @@
     "webpack": "4.35.3",
     "webpack-cli": "3.3.5",
     "webpack-node-externals": "1.7.2"
-  },
-  "dependencies": {
-    "algoliasearch": "3.33.0",
-    "axios": "^0.19.2",
-    "express": "4.17.1",
-    "isomorphic-style-loader": "^5.1.0",
-    "mdbreact": "^4.27.0",
-    "postcss-loader": "^3.0.0",
-    "prop-types": "15.6.0",
-    "react": "16.8.6",
-    "react-dom": "16.8.6",
-    "react-instantsearch-dom": "5.7.0",
-    "style-loader": "^1.2.1"
   }
 }
