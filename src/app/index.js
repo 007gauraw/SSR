@@ -6,13 +6,14 @@ import ListView from './listView';
 class App extends Component {
   
   updatePageCount(opration, currentPage){
-    let newPageNumber ;
+    let newPageNumber = 0;
+    
     if (opration === "increse"){
-      newPageNumber = currentPage + 1;
+      newPageNumber = parseInt(currentPage) + 1;
     }else {
-      newPageNumber = currentPage - 1;
+      newPageNumber = parseInt(currentPage) - 1;
     }
-    window.location.href = `${window.location.href}${newPageNumber}`; 
+    window.location.href = `${window.location.origin}/${newPageNumber}`; 
   }
   render() {
     const {columns, rows, pageNumber } = this.props;
