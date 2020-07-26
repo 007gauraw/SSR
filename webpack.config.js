@@ -34,6 +34,18 @@ module.exports = [
             },
           ],
         },
+        {
+          test: /\.scss$/,
+          loader: 'css-loader'
+        },
+        {
+          test: /\.(ttf|eot|otf|svg|png)$/,
+          loader: 'file-loader?emitFile=false'
+        },
+        {
+          test: /\.(woff|woff2)$/,
+          loader: 'url-loader?emitFile=false'
+        },
       ],
     },
   },
@@ -56,6 +68,18 @@ module.exports = [
             },
           ],
         },
+        {
+          test: /\.scss$/,
+          use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader']
+        },
+        {
+          test: /\.(ttf|eot|otf|svg|png)$/,
+          loader: 'file-loader'
+        },
+        {
+          test: /\.(woff|woff2)$/,
+          loader: 'url-loader'
+        }
       ],
     },
     resolve: {
