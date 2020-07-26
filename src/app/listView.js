@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import styles from './styling.css'
+import styles from './App.module.scss'
 // const { InstantSearch, findResultsState } = createInstantSearch();
 
 class ListView extends Component {
@@ -45,23 +45,36 @@ class ListView extends Component {
 
       const { num_comments, points, title, objectID } = news //destructuring
       let newsFeed = (typeof localStorage === 'undefined') ? null : localStorage.getItem(objectID);
-      let style1 = {}
+      let classes = "";
       if (newsFeed) {
         newsFeed = JSON.parse(newsFeed);
-        style1 = (newsFeed.hidden == true) ? { display: "none" } : { display: "block" };
+        classes = (newsFeed.hidden == true) ? "hide" : "show";
       }
-
-      return (
-        <tr style = {{
-          border: "1px solid black",
-          "textAlign": "left",
-          "padding": "15px"}} key={index} >
-          <td>{num_comments}</td>
-          <td className="points">{(newsFeed && newsFeed.vote) ? newsFeed.vote : points}</td>
-          <td><button onClick={(e) => this.sendDummyRequest(e, objectID, points)}>Up vote</button></td>
-          <td><span>{title}</span><span><a href="javascript: false" onClick={(e) => this.hideStory(e, objectID, points)}>Hide</a></span></td>
-        </tr>)
-
+      if(newsFeed && newsFeed.hidden === true) {
+        return (
+          <tr className={styles.hide} style = {{
+            border: "1px solid black",
+            "textAlign": "left",
+            "padding": "15px"}} key={index} >
+            <td>{num_comments}</td>
+            <td className="points">{(newsFeed && newsFeed.vote) ? newsFeed.vote : points}</td>
+            <td><button onClick={(e) => this.sendDummyRequest(e, objectID, points)}>Up vote</button></td>
+            <td><span>{title}</span><span><a href="javascript: false" onClick={(e) => this.hideStory(e, objectID, points)}>Hide</a></span></td>
+          </tr>)
+      }else {
+        return (
+          <tr className={styles.show} style = {{
+            border: "1px solid black",
+            "textAlign": "left",
+            "padding": "15px"}} key={index} >
+            <td>{num_comments}</td>
+            <td className="points">{(newsFeed && newsFeed.vote) ? newsFeed.vote : points}</td>
+            <td><button onClick={(e) => this.sendDummyRequest(e, objectID, points)}>Up vote</button></td>
+            <td><span>{title}</span><span><a href="javascript: false" onClick={(e) => this.hideStory(e, objectID, points)}>Hide</a></span></td>
+          </tr>)
+  
+      }
+      
 
     })
     return array;
