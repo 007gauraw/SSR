@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ListView from './listView';
+import {RowChart} from "./rowChart";
+//import {AdvanceChart} from "./advanceChart";
+
 // const { InstantSearch, findResultsState } = createInstantSearch();
 
 class App extends Component {
@@ -20,6 +23,10 @@ class App extends Component {
     return (
       <React.Fragment>
         <ListView columns={columns} rows= {rows}></ListView>
+       
+        <div id="rowChart1" className="rowChart"></div>
+        <RowChart newsData = {rows}></RowChart> 
+      { /* <AdvanceChart newsData = {rows}></AdvanceChart> */}
         <button onClick={()=>this.updatePageCount('decrese', pageNumber)} >prev</button>
         <button onClick={()=>this.updatePageCount('increse', pageNumber)}>next</button>
       </React.Fragment>
