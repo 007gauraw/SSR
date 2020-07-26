@@ -32,11 +32,12 @@ Email : iamgaurawjoshi@gmail.com
 * Next page Prev page working fine
 * Heroku pipeline working fine (CICD)
 * All device compatibility added , Works on Mobile as well as desktop, ipad as well. Well tested :) 
+* Added working chart
+* Added bar chart
+* webpack css config also completed 
 
 ## Things that didnt work out
-
-* Unable to add css loader in web config
-* due to which unable to to show charts prioperly 
+* Added bar chart instead line chart
 
 
 ## WOrking envoirment 
