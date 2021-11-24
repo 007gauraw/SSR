@@ -26,7 +26,6 @@ Email : iamgaurawjoshi@gmail.com
  
 ## Working Functionality
 
-* I did try to match the requirement as most as possible
 * Voteting feature is working fine 
 * Hide feature working fine
 * Next page Prev page working fine
@@ -36,10 +35,4 @@ Email : iamgaurawjoshi@gmail.com
 * Added bar chart
 * webpack css config also completed 
 
-## Things that didnt work out
-* Added bar chart instead line chart
-
-
-## WOrking envoirment 
-Due to security restrictions on office machine I have develop all the functinality on cloude based platform
 
