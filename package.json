@@ -30,7 +30,7 @@
     "isomorphic-style-loader": "^5.1.0",
     "jest": "24.8.0",
     "mdbreact": "^4.27.0",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "nodemon": "1.19.1",
     "postcss-loader": "^3.0.0",
     "prop-types": "15.6.0",
